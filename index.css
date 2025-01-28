@@ -1,0 +1,1075 @@
+
+/* Main home pege responsive style */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Adjusted to sans-serif */
+}
+
+.portfolio-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navlist {
+    display: flex;
+    gap: 3.5rem;
+    height: 12vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+.navlist li {
+    list-style: none;
+}
+
+.navlist li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white;
+    position: relative;
+}
+
+.left-container,
+.right-container {
+    height: 100vh;
+    display: flex;
+}
+
+.left-container {
+    background-color: #262525;
+    width: 70%;
+    padding: 3rem;
+    align-items: center;
+}
+
+.right-container {
+    background: linear-gradient(-45deg, #3877ff, #262525 70%);
+    width: 30%;
+}
+
+.icons .fa-brands {
+    color: #bbb;
+    font-size: 1.7rem;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+button:nth-child(1) {
+    background-color: #5DB9EE;
+    color: #262525;
+}
+
+button:nth-child(2) {
+    background-color: transparent;
+    color: #5DB9EE;
+    margin-left: 2rem;
+}
+
+button:nth-child(1):hover {
+    background-color: transparent;
+    color: #5DB9EE;
+}
+
+button:nth-child(2):hover {
+    background-color: #5DB9EE;
+    color: #262525;
+}
+
+.icons .fa-brands:hover {
+    cursor: pointer;
+    background: linear-gradient(#fff, #3877ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.design .circle {
+    background-image: url(profile1.jpg);
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.circle:nth-child(1) {
+    background: linear-gradient(90deg, transparent 50%, #262525 50%);
+    width: 38rem;
+}
+
+.circle:nth-child(2) {
+    background-image: url(profile1.jpg);
+    width: 30rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 1rem solid white;
+    box-shadow: 
+        0 0 1rem #fff, 
+        inset 0 0 1rem #fff,
+        0 0 2rem #3877ff,
+        inset 0 0 2rem #3877ff,
+        0 0 4rem #3877ff,
+        inset 0 0 4rem #3877ff;
+}
+
+.navlist li a::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 0.1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s;
+}
+
+.navlist li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.content {
+    margin-left: 4rem;
+}
+
+.content .intro {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.content .intro span {
+    color: #5DB9EE;
+}
+
+.content h1 {
+    font-size: 4rem;
+    color: #5DB9EE;
+}
+
+.content .detail {
+    font-size: 1.1rem;
+    color: #fff;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem;
+    line-height: 1.8rem;
+}
+
+.btn-container {
+    display: flex;
+    gap: 2rem; /* Ensure buttons don't stack */
+}
+
+.btn-container button {
+    border: 0.1rem solid #5DB9EE;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium Devices (tablets) */
+@media (max-width: 1400px) {
+    .navlist {
+        gap: 2rem; /* Adjust gap for better spacing */
+        position: fixed;
+    }
+
+    .navlist li a {
+        font-size: 0.9rem; /* Smaller font size for nav items */
+    }
+
+    .left-container {
+        width: 70%;
+        padding: 2rem;
+    }
+
+    .right-container {
+        width: 30%;
+    }
+
+    .content h1 {
+        font-size: 3rem; /* Adjust font size for headers */
+    }
+
+    .content .intro {
+        font-size: 1.2rem;
+    }
+
+    .content .detail {
+        font-size: 1rem;
+    }
+
+    .icons .fa-brands {
+        font-size: 1.5rem;
+    }
+
+    .design .circle:nth-child(1) {
+        width: 28rem;
+    }
+
+    .design .circle:nth-child(2) {
+        width: 18rem;
+    }
+    .design .circle {
+        width: 18rem;
+    }
+    
+}
+
+/* Small Devices (smartphones) */
+@media (max-width: 1024px) {
+    body{
+        height: 100%;
+    }
+
+    .design .circle {
+        position: absolute;
+        top: 30%;
+        width: 20rem;
+        left: 60%;
+    }
+    .left-container {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .right-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .content { /* Reset left margin for mobile */
+        text-align: center; /* Center the content text */
+        padding: 1rem;
+        width: 100%; /* Ensure the content section takes full width */
+        display: flex;
+        flex-direction: column;
+        padding-top: 500px;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .content .intro {
+        font-size: 1rem;
+    }
+
+    .content .detail {
+        font-size: 0.9rem;
+        align-self: center;
+    }
+
+    .btn-container {
+        flex-direction: column; /* Stack buttons on small screens */
+    }
+
+    .navlist {
+        flex-direction: row;
+        gap: 1.5rem; /* Add more gap when stacked */
+    }
+
+    .navlist li a {
+        font-size: 10px;
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .design .circle:nth-child(1) {
+        width: 25rem;
+    }
+
+    .design .circle:nth-child(2) {
+        width: 18rem;
+    }
+}
+
+
+
+/* Extra Small Devices (portrait phones) */
+/* @media (max-width: 480px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content .intro {
+        font-size: 0.9rem;
+    }
+
+    .content .detail {
+        font-size: 0.8rem;
+    }
+
+    .btn-container button {
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .icons .fa-brands {
+        font-size: 1.5rem;
+    }
+
+    .navlist {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navlist li a {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .design .circle:nth-child(1) {
+        width: 22rem;
+    }
+
+    .design .circle:nth-child(2) {
+        width: 16rem;
+    }
+} */
+
+
+/* Extra Small Devices (portrait phones) */
+/* Extra Small Devices (portrait phones) */
+@media (max-width: 480px) {
+    /* Adjusting overall layout */
+    .portfolio-container {
+        flex-direction: column; /* Stack the containers vertically */
+        align-items: center; /* Center align the content */
+        width: 100%;
+    }
+
+    .design{
+    }
+
+    .design .circle {
+        position: absolute;
+        top: 25%;
+        padding: 0;
+        width: 18rem;
+        left: 50%;
+    }
+
+    .navlist {
+        flex-direction: row; /* Stack navigation items vertically */
+        gap: 1rem; /* Space out navigation items */
+        position: fixed; /* Make the navbar static for mobile */
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%; /* Ensure the nav takes up full width */
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-bottom: 20px;
+    }
+
+    .navlist li a {
+        font-size: 10px; /* Increase font size for better readability */
+        text-align: center; /* Center-align navigation links */
+    }
+
+    /* Left and Right Containers */
+    .left-container{
+        width: 100%; /* Full width on phone screens */
+        padding: 1rem; /* Reduce padding for a compact design */
+        align-items: center;
+        justify-content: center; /* Ensure content is centered */
+    }
+
+    /* Right container */
+    .right-container {
+        scale: 0;
+        height: 0px;
+        width: 0px;
+    }
+
+    /* Adjust the image circle size */
+    .design .circle:nth-child(1) {
+        width: 10rem; /* Adjust the size of the circle for smaller screens */
+        height: 10rem; /* Ensure the height is proportional */
+    }
+
+    .design .circle:nth-child(2) {
+        width: 10rem; /* Adjust profile image size */
+        height: 10rem; /* Ensure the image is a square */
+    }
+
+    /* Content Section */
+    .content {
+        margin-left: 0; /* Reset left margin for mobile */
+        text-align: center; /* Center the content text */
+        padding: 1rem;
+        width: 100%; /* Ensure the content section takes full width */
+    }
+
+    .content h1 {
+        font-size: 2rem; /* Make the title smaller for mobile */
+        line-height: 1.2;
+    }
+
+    .content .intro {
+        font-size: 1.1rem; /* Adjust intro text font size */
+        margin-bottom: 1rem; /* Add space below intro text */
+    }
+
+    .content .detail {
+        font-size: 0.9rem; /* Reduce detail text font size */
+        max-width: 100%; /* Ensure the text width is flexible */
+        margin: 1rem 0;
+        line-height: 1.6; /* Improve line spacing */
+        padding: 0 1rem; /* Add padding for text readability */
+    }
+
+    /* Button container */
+    .btn-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 1rem; /* Space out the buttons */
+        align-items: center; /* Center align buttons */
+        padding: 0 1rem; /* Add padding to prevent crowding */
+    }
+
+    .btn-container button {
+        font-size: 1rem; /* Smaller font size for buttons */
+        padding: 0.7rem 1.2rem; /* Adjust button padding */
+        border-radius: 0.5rem;
+        width: auto; /* Ensure buttons don't stretch too much */
+    }
+
+    /* Social Icons */
+    .icons {
+        flex-direction: column; /* Align icons horizontally */
+        gap: 1.5rem; /* Adjust gap between icons */
+        justify-content: center; /* Center the icons */
+        position: relative;
+        top: 50px;
+        right: 40%;
+    }
+
+    .icons .fa-brands {
+        font-size: 1.5rem; /* Make icons smaller */
+    }
+
+    /* Adjust for potential overlapping */
+    .left-container, .right-container, .content {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+/* Other peges style */
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navlist-other {
+    display: flex;
+    gap: 3.5rem;
+    height: 12vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+.portfolio-container-other {
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.navlist-other ul{
+    background-color: #333;
+}
+
+.navlist-other li {
+    list-style: none;
+}
+
+.navlist-other li a {
+    text-decoration: none;
+    color: #f1f1f1;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+.navlist-other li a::after{
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .5s;
+}
+.navlist-other li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.navlist-other li{
+    list-style: none;
+}
+.navlist-other li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white;
+    position: relative;
+    
+}
+
+
+
+@media (max-width:480px){
+    .navlist-other {
+        flex-direction: row; /* Stack navigation items vertically */
+        gap: 1rem; /* Space out navigation items */
+        position: fixed; /* Make the navbar static for mobile */
+        background-color: transparent;
+        width: 90%; /* Ensure the nav takes up full width */
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .navlist-other li a {
+        font-size: 10px; /* Increase font size for better readability */
+        text-align: center; /* Center-align navigation links */
+    }
+
+    
+
+   
+    header {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 0;
+        height: 12vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 90%;
+        z-index: 10;
+    }
+
+}
+
+
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 0;
+    height: 12vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+header nav ul li a.active, header nav ul li a:hover {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+/* Adjust main content for fixed header */
+main {
+    padding-top: 10px; /* Adjust based on header height */
+    position: relative;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.navbar ul li {
+    flex: 1;
+}
+
+.navbar ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #575757;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 7rem;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+
+
+
+/* About Us Page Styles */
+.aboutus {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 5rem;
+
+}
+
+.aboutus .container h1 {
+ font-size: 1.5rem;
+}
+
+.aboutus .personal h2 {
+padding-top: 20px;
+}
+
+.skills-section h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    }
+
+.about .container {
+    padding-top: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about h1 {
+    padding-top: 50PX;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.about p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #666;
+}
+.skills-section {
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.skills-container {
+    max-width: 100%px;
+    margin: 0 auto;
+}
+
+.skills-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.skills-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    flex: 1;
+    text-align: left;
+    font-weight: bold;
+}
+
+.skill-bar {
+    flex: 4;
+    background-color: #e0e0e0;
+    height: 15px;
+    border-radius: 5px;
+    margin: 0 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+.skill-percentage {
+    flex: 0.5;
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+/* Contact Us Page Styles */
+
+.contact-info{
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    top: 200px;
+    left: 30px;
+    font-size: 15px;
+}
+
+.contact-info div{
+    padding-top: 15px;
+}
+
+.contact {
+    margin-left: 400px;
+    max-width: 750px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 0%;
+    position: relative;
+    bottom: 150px;
+}
+
+.contact h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.contact p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact input, .contact textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contact button {
+    padding: 0.7rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #0056b3;
+}
+
+
+@media(max-width:480px){
+
+    .contact {
+        position: relative;
+        margin-top: 0px;
+        height: 100%;
+        width: 90%;
+        top: -240px;
+        right: 375px;
+        align-self: center;
+     }
+
+     
+
+    .contact-info{
+        position: relative;
+        flex-direction: column;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        top: 550px;
+        left: 30px;
+        font-size: 10px;
+        margin-top: 0;
+        padding-bottom: 80px;
+        padding-top: 100px;
+    }
+
+    .contact input, .contact textarea {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+}
+
+
+
+/* Services Page Styles */
+.services {
+    max-width: 900px;
+    margin: 7rem auto;
+    text-align: center;
+    background: #fff;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.services h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.services p {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-item {
+    background: #f1f1f1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #007BFF;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+/* Download CV Page Styles */
+.download-cv {
+    margin-top: 7rem;
+    text-align: center;
+    background: #fff;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.download-cv h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.download-cv p {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Portfolio Page Styles */
+.portfolio {
+    max-width: 1200px;
+    margin: 7rem auto;
+    text-align: center;
+    background: #fff;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.portfolio h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.portfolio p {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.portfolio-item {
+    background: #f1f1f1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.portfolio-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #007BFF;
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    color: #666;
+}
+/* Responsive Header */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+    }
+}
